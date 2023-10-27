@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Map;
+
 
 @RestController
 @RequestMapping(value = "/api")
@@ -20,7 +20,7 @@ public class ApiController {
 
     @GetMapping(value = "/products")
     public List<Product> getProducts(){
-        return productClient.getProducts(Map.of("Authorisation","4545454545455"));
+        return productClient.getProducts();
     }
 
     @GetMapping(value = "/products/{id}")

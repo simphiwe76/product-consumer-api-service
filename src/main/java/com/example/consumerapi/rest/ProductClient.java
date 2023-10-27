@@ -10,7 +10,7 @@ import java.util.Map;
 
 public interface ProductClient {
     @GetExchange(value = "/all")
-    List<Product> getProducts(@RequestHeader Map<String,String> header);
+    List<Product> getProducts();
 
     @GetExchange(value = "/single-product/{id}")
     Product getProduct(@PathVariable Long id);
